@@ -31,7 +31,7 @@ public class MouseDragController : MonoBehaviour, IBasicControlls {
 	{
 		if (isDragging) {
 			Vector2 delta = getCursorPosition() - dragOrigin;
-			return delta.x * Time.deltaTime;;
+			return delta.x / Screen.width;
 		} else {
 			return 0;
 		}
@@ -40,7 +40,7 @@ public class MouseDragController : MonoBehaviour, IBasicControlls {
 	{
 		if (isDragging) {
 			Vector2 delta = getCursorPosition() - dragOrigin;
-			return delta.y * Time.deltaTime;
+			return delta.y / Screen.height;
 		} else {
 			return 0;
 		}

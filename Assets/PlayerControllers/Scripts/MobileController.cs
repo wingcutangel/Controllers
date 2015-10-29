@@ -18,7 +18,7 @@ public class MobileController: IBasicControlls {
 	public float getViewX(){
 		float x = 0f;
 		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved) {
-			Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition * Time.deltaTime / Input.GetTouch(0).deltaTime;
+			Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;// * Time.deltaTime / Input.GetTouch(0).deltaTime;
 			x = touchDeltaPosition.x;
 		}
 		return x;
@@ -27,7 +27,7 @@ public class MobileController: IBasicControlls {
 	public float getViewY(){
 		float y = 0f;
 		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved) {
-			Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition * Time.deltaTime / Input.GetTouch(0).deltaTime;
+			Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;// * Time.deltaTime / Input.GetTouch(0).deltaTime;
 			y = touchDeltaPosition.y;
 		}
 		return y;
